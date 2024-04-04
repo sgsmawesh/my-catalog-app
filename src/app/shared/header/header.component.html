@@ -1,0 +1,9 @@
+<nav class="my-nav">
+    <a [routerLink]="'/home'" [routerLinkActive]="'active'">Home</a>
+    <a *ngIf="!userName" [routerLink]="'/login'" [routerLinkActive]="'active'">Login</a>
+    <a *ngIf="!userName" [routerLink]="'/signup'" [routerLinkActive]="'active'">Sign-up</a>
+    <a *ngIf="userName" [routerLink]="'/categories'" [routerLinkActive]="'active'">Product Categories</a>
+    <a *ngIf="userName" [routerLink]="'/my-basket'" [routerLinkActive]="'active'">My Basket</a>
+    <a *ngIf="userName" [routerLink]="'/profile'" [routerLinkActive]="'active'"> Hi {{userName}}! </a>
+    <a *ngIf="userName" (click)="logout()"> Logout </a>
+</nav>

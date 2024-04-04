@@ -1,0 +1,22 @@
+<div class="p-10 login-container">
+    <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+        <div fxLayout="column">
+            <div fxFlex fxFlexAlign="center">
+                <mat-form-field>
+                    <mat-label>Username</mat-label>
+                    <input type="text" matInput placeholder="Username" formControlName="username" />
+                </mat-form-field>
+            </div>
+
+            <div fxFlex fxFlexAlign="center">
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput placeholder="Password" formControlName="password" />
+                </mat-form-field>
+            </div>
+            <div fxFlex fxFlexAlign="center">
+                <button mat-raised-button type="submit" color="primary">Login</button>
+            </div>
+        </div>
+    </form>
+</div>

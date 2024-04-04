@@ -1,0 +1,17 @@
+<div fxLayout="column" fxLayoutAlign="center">
+    <div fxFlex="100" fxFlexAlign="center">
+        <h3>Please select from following categories:</h3>
+    </div>
+    <div fxFlex="100" fxFlexAlign="stretch">
+        <mat-list style="height: 500px; overflow: auto;">
+            <div mat-subheader>Categories</div>
+            @for (cat of categories; track cat) {
+            <mat-list-item>
+                <mat-icon matListItemIcon>category</mat-icon>
+                <a mat-button matListItemTitle [routerLink]="['/products', cat]">{{cat | titlecase}}</a>
+            </mat-list-item>
+            }
+        </mat-list>
+
+    </div>
+</div>
